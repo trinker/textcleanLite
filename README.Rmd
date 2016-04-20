@@ -1,0 +1,37 @@
+---
+title: "textcleanLite"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+````
+
+
+
+**textcleanLite** is lite version of [textclean](https://github.com/trinker/textclean) without the `check_text` (hunspell dependency).
+
+# Installation
+
+To download the development version of **textcleanLite**:
+
+Download the [zip ball](https://github.com/trinker/textcleanLite/zipball/master) or [tar ball](https://github.com/trinker/textcleanLite/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_gh("trinker/textcleanLite")
+```
+
+# Contact
+
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/textcleanLite/issues>    
+- send a pull request on: <https://github.com/trinker/textcleanLite/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    

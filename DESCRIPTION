@@ -1,0 +1,16 @@
+Package: textcleanLite
+Title: Text Cleaning Tools
+Version: 0.0.1
+Authors@R: c(person("Tyler", "Rinker", email =
+        "tyler.rinker@gmail.com", role = c("aut", "cre")))
+Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
+Description: Lite version of 'textclean' package without 'hunspell'
+        dependency.
+Depends: R (>= 3.2.3)
+Imports: qdapRegex, stringi
+Suggests: testthat, textshape, lexicon
+Date: 2016-04-20
+License: GPL-2
+LazyData: TRUE
+Roxygen: list(wrap = FALSE)
+RoxygenNote: 5.0.1
